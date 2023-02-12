@@ -35,6 +35,8 @@ Calculated only the two farthest points of Geo Data to calculate distance throug
 --- Bonus points
 
 • Sketch how you would set up the application on the cloud (AWS, GCP, etc);
+
+
 Sketch is saved as a JPG image in the repo
 
 • It is encouraged to simplify the data by a data model on the data warehouse layer.
