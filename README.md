@@ -37,7 +37,7 @@ Calculated only the two farthest points of Geo Data to calculate distance throug
 7. Sketch how you would set up the application on the cloud (AWS, GCP, etc);
 
 
-Sketch is saved as a JPG image in the repo
+Sketch is saved as a JPG image in the repo and email attachment.
 
 8. It is encouraged to simplify the data by a data model on the data warehouse layer.
 The data is simplifyed through the process of extracting it, its also activated for use through a dashboard.
