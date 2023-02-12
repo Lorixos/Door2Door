@@ -1,0 +1,8 @@
+LOAD DATA
+  INTO
+  -- OVERWRITE
+  `raw.import_file_test`
+FROM FILES (
+  format = 'JSON',
+  ignore_unknown_values = TRUE,
+  uris = ['gs://de-assessment/data/*.json']);
