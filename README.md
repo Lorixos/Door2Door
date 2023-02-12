@@ -29,7 +29,7 @@ future;
 Through the transfer process into Cloud Storage the data is automatically saved there but as an added point of security, everytime the raw data is pulled from the Google Bucket into Bigquery the data is saved in a table. 
 
 • What is the average distance traveled by our vehicles during an operating period?;
-BI Dashboard - https://lookerstudio.google.com/u/1/reporting/e99a38e0-c02a-4e21-a7e7-fa6edbe23c0a/page/TJCFD/
+BI Dashboard - https://lookerstudio.google.com/u/1/reporting/e99a38e0-c02a-4e21-a7e7-fa6edbe23c0a/page/TJCFD/ 
 Calculated only the two farthest points of Geo Data to calculate distance through the Haversine formula
 
 --- Bonus points
