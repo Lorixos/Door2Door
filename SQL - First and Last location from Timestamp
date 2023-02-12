@@ -1,0 +1,25 @@
+WITH base AS (
+  SELECT
+    DISTINCT
+    EXTRACT( DATE FROM captured_at ) AS day,
+    captured_at AS timestamp,
+    data_id AS driver,
+    event,
+    CONCAT( data_location_longitude, ', ', data_location_latitude ) AS location
+  FROM
+    `Dataset.door2door`
+  WHERE
+    captured_on = 'vehicle'
+    AND
+    event = 'update'
+  )
+SELECT
+  DISTINCT
+  day,
+  driver,
+  FIRST_VALUE( location IGNORE NULLS ) OVER( PARTITION BY day, driver ORDER BY timestamp ) AS first_location,
+  FIRST_VALUE( location IGNORE NULLS ) OVER( PARTITION BY day, driver ORDER BY timestamp DESC ) AS last_location,
+FROM
+  base
+ORDER BY
+  1,2,3
