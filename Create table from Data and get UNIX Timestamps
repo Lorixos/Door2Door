@@ -1,0 +1,37 @@
+WITH
+  base AS (
+  SELECT
+    UNIX_SECONDS(captured_at) AS date_unix,
+    organization_id,
+    event,
+    data_id,
+    data_location_at,
+    data_location_longitude,
+    data_location_latitude,
+    captured_at,
+    captured_on,
+  FROM
+    `Dataset.door2door` )
+SELECT
+  organization_id,
+  event,
+  data_id,
+  data_location_at,
+  data_location_longitude,
+  data_location_latitude,
+  captured_at,
+  captured_on,
+  CASE
+    WHEN event LIKE 'register' THEN date_unix
+  ELSE
+  0
+END
+  AS register_unix,
+  CASE
+    WHEN event LIKE 'deregister' THEN date_unix
+  ELSE
+  0
+END
+  AS deregister_unix,
+FROM
+  base
