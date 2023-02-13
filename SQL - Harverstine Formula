@@ -1,0 +1,11 @@
+SELECT
+  6371000 * 2 * ASIN(
+    SQRT(
+      POWER(SIN((lat1 - lat2) * pi()/180 / 2), 2) +
+      COS(lat1 * pi()/180) *
+      COS(lat2 * pi()/180) *
+      POWER(SIN((lon1 - lon2) * pi()/180 / 2), 2)
+    )
+  ) AS distance_in_meters
+FROM
+  door2door
