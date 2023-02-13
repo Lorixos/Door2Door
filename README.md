@@ -31,7 +31,7 @@ future;
 6. What is the average distance traveled by our vehicles during an operating period?;
 !! BI Dashboard - https://lookerstudio.google.com/u/1/reporting/e99a38e0-c02a-4e21-a7e7-fa6edbe23c0a/page/TJCFD/ 
 
-!! Calculated only the two farthest points of Geo Data to calculate distance through the Haversine formula
+!! Used only the two farthest points of Geo Data to calculate distance through the Haversine formula
 
 --- Bonus points
 
